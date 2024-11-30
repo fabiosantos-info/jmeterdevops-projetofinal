@@ -27,14 +27,14 @@
       <hashTree>
         <ConfigTestElement guiclass="HttpDefaultsGui" testclass="ConfigTestElement" testname="HTTP Request Defaults" enabled="true">
           <stringProp name="HTTPSampler.protocol">https</stringProp>
-          <stringProp name="HTTPSampler.domain">friendly-yodel-976q44j9wxvc676-5000.app.github.dev</stringProp>
+          <stringProp name="HTTPSampler.domain">exemplo-flask.onrender.com</stringProp>
           <stringProp name="HTTPSampler.port"></stringProp>
           <stringProp name="HTTPSampler.path"></stringProp>
           <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
         </ConfigTestElement>
         <hashTree/>
         <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
-          <stringProp name="ConstantTimer.delay">10</stringProp>
+          <stringProp name="ConstantTimer.delay">5</stringProp>
         </ConstantTimer>
         <hashTree/>
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="GET Persons" enabled="true">
@@ -43,7 +43,7 @@
           <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
           <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
           <stringProp name="HTTPSampler.method">GET</stringProp>
-          <stringProp name="HTTPSampler.path">/pessoas</stringProp>
+          <stringProp name="HTTPSampler.path">/persons</stringProp>
         </HTTPSamplerProxy>
         <hashTree/>
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="GET Products" enabled="true">
@@ -61,17 +61,18 @@
             <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
             <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
             <stringProp name="HTTPSampler.method">POST</stringProp>
-            <stringProp name="HTTPSampler.path">/pessoa</stringProp>
+            <stringProp name="HTTPSampler.path">/persons</stringProp>
             <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
                 <collectionProp name="Arguments.arguments">
                 <elementProp name="JSON body" elementType="HTTPArgument">
                     <boolProp name="HTTPArgument.always_encode">false</boolProp>
                     <stringProp name="Argument.value">
                     {
-                        "nome": "JMeter",
-                        "sobrenome": "Test",
-                        "cpf": "123.456.789-00",
-                        "data_nascimento": "1990-01-01"
+                      "email":"rarpinog@ed.gov",
+                      "first_name":"JMeter",
+                      "gender":"Test",
+                      "id":17,
+                      "last_name":"Mack"
                     }
                     </stringProp>
                     <stringProp name="Argument.metadata">=</stringProp>
