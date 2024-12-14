@@ -16,10 +16,10 @@
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" enabled="true" testname="Loop Controller">
           <boolProp name="LoopController.continue_forever">false</boolProp>
-          <stringProp name="LoopController.loops">10</stringProp>
+          <stringProp name="LoopController.loops">100</stringProp>
         </elementProp>
         <stringProp name="ThreadGroup.num_threads">100</stringProp>
-        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">10</stringProp>
         <boolProp name="ThreadGroup.scheduler">false</boolProp>
         <stringProp name="ThreadGroup.duration"></stringProp>
         <stringProp name="ThreadGroup.delay"></stringProp>
@@ -27,7 +27,7 @@
       <hashTree>
         <ConfigTestElement guiclass="HttpDefaultsGui" testclass="ConfigTestElement" testname="HTTP Request Defaults" enabled="true">
           <stringProp name="HTTPSampler.protocol">https</stringProp>
-          <stringProp name="HTTPSampler.domain">exemplo-flask.onrender.com</stringProp>
+          <stringProp name="HTTPSampler.domain">fictional-space-palm-tree-54qjqx4x69xfvxwv-5000.app.github.dev</stringProp>
           <stringProp name="HTTPSampler.port"></stringProp>
           <stringProp name="HTTPSampler.path"></stringProp>
           <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
@@ -43,7 +43,7 @@
           <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
           <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
           <stringProp name="HTTPSampler.method">GET</stringProp>
-          <stringProp name="HTTPSampler.path">/persons</stringProp>
+          <stringProp name="HTTPSampler.path">/pessoas</stringProp>
         </HTTPSamplerProxy>
         <hashTree/>
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="GET Products" enabled="true">
@@ -61,18 +61,17 @@
             <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
             <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
             <stringProp name="HTTPSampler.method">POST</stringProp>
-            <stringProp name="HTTPSampler.path">/persons</stringProp>
+            <stringProp name="HTTPSampler.path">/pessoa</stringProp>
             <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
                 <collectionProp name="Arguments.arguments">
                 <elementProp name="JSON body" elementType="HTTPArgument">
                     <boolProp name="HTTPArgument.always_encode">false</boolProp>
                     <stringProp name="Argument.value">
                     {
-                      "email":"rarpinog@ed.gov",
-                      "first_name":"JMeter",
-                      "gender":"Test",
-                      "id":17,
-                      "last_name":"Mack"
+                      "nome": "Teste",
+                      "sobrenome": "Lopes",
+                      "cpf": "111.111.111-11",
+                      "data_nascimento": "1981-09-22"
                     }
                     </stringProp>
                     <stringProp name="Argument.metadata">=</stringProp>
